@@ -19,16 +19,16 @@ from django.contrib.auth.views import LoginView,LogoutView
 #-------------FOR ADMIN RELATED URLS
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.home_view,name=''),
+    path('', views.home_view, name='home'),
 
 
-    path('aboutus', views.aboutus_view),
-    path('contactus', views.contactus_view),
+    path('aboutus', views.aboutus_view, name="about"),
+    path('contactus', views.contactus_view, name="contact"),
 
 
-    path('adminclick', views.adminclick_view),
-    path('doctorclick', views.doctorclick_view),
-    path('patientclick', views.patientclick_view),
+    path('adminclick', views.adminclick_view, name="admin"),
+    path('doctorclick', views.doctorclick_view, name="doctor"),
+    path('patientclick', views.patientclick_view, name="patient"),
 
     path('adminsignup', views.admin_signup_view),
     path('doctorsignup', views.doctor_signup_view,name='doctorsignup'),
