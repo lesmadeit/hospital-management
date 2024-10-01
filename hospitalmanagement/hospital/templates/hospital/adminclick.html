@@ -4,16 +4,19 @@
 
 <br>
 <br>
+<center>
 
-<div class="jumbotron" style="margin-bottom:0px;">
-  <h1 class="display-4" style="text-align:center;">Hello, Admin</h1>
-  <p class="lead">Welcome to Hospital Management System.</p>
-  <hr class="my-4">
-  <p>You can access various features after Login/SignUp.</p>
-  <p class="lead">
-    <a class="btn btn-success btn-lg" href="/adminsignup" role="button">SignUp</a>
-    <a class="btn btn-success btn-lg" href="/adminlogin" role="button">Login</a>
-  </p>
-</div>
+  <div class="jumbotron" style="margin-bottom:0px;">
+    <h1 class="display-4" style="text-align:center;">Hello, Admin</h1>
+    <p class="lead">Welcome to Hospital Management System.</p>
+    <p>You can access various features after Login/SignUp.</p>
+    <p class="lead">
+      <a class="btn btn-primary " href="{% url 'adminsignup' %}" role="button">SignUp</a>
+      <a class="btn btn-primary " href="{% url 'adminlogin' %}" role="button">Login</a>
+    </p>
+  </div>
+</center>
+
+<br><br><br>
 
 {% endblock content %}

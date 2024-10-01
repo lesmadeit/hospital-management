@@ -1,37 +1,99 @@
-<!DOCTYPE html>
+{% extends 'hospital/homebase.html' %}
 {% load static %}
-<html lang="en" dir="ltr">
-
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <title>Contact</title>
 
 
-</head>
 
-<body>
 
-  {% include "hospital/navbar.html" %}
+
+
+
+{% block content %}
   <br><br>
 
-  <center>
-    <h3 class='alert alert-success'>Send Us Your Valuable Feedback !</h3>
+  <!-- Contact Section -->
+<section id="contact" class="contact section">
 
-    <form method="POST">
-      <!-- Very Important csrf Token -->
-      {% csrf_token %}
-      <div class="form-group">
-        <p>
-        <h3>{{ form.as_p }}</h3>
-        </p>
-        <br>
-        <input type="submit" value="Send Message" class='btn btn-success btn-lg'>
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row gy-4">
+
+      <!-- Contact Information -->
+      <div class="col-lg-4">
+        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+          <i class="bi bi-geo-alt flex-shrink-0"></i>
+          <div>
+            <h3>Location</h3>
+            <p>A108 Adam Street, New York, NY 535022</p>
+          </div>
+        </div><!-- End Info Item -->
+
+        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+          <i class="bi bi-telephone flex-shrink-0"></i>
+          <div>
+            <h3>Call Us</h3>
+            <p>+1 5589 55488 55</p>
+          </div>
+        </div><!-- End Info Item -->
+
+        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+          <i class="bi bi-envelope flex-shrink-0"></i>
+          <div>
+            <h3>Email Us</h3>
+            <p>info@example.com</p>
+          </div>
+        </div><!-- End Info Item -->
       </div>
-    </form>
-  </center>
-  {% include "hospital/footer.html" %}
-</body>
+
+      <!-- Contact Form -->
+      <div class="col-lg-8">
+        <form method="POST" action="{% url 'contact' %}" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+          <!-- Django CSRF Token -->
+          {% csrf_token %}
+
+          <div class="row gy-4">
+
+            <div class="col-md-6">
+                <input type="text" name="{{ form.Name.name }}" class="form-control" placeholder="Your Name" required="">
+            </div>
+
+            <div class="col-md-6">
+              <input type="email" class="form-control" name="{{ form.Email.name }}" placeholder="Your Email" required="">
+            </div>
+
+            <div class="col-md-12">
+              <textarea name="{{ form.Message.name }}" class="form-control" placeholder="Message" rows="6" required id="{{ form.message.id_for_label }}"></textarea>
+            </div>
+
+            <div class="col-md-12 text-center">
+              <button type="submit">Send Message</button>
+            </div>
+
+          </div>
+        </form>
+      </div><!-- End Contact Form -->
+
+    </div>
+  </div>
+
+</section><!-- /Contact Section -->
+
+<!-- Scroll Top -->
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Preloader -->
+<div id="preloader"></div>
+ 
+
+  <br><br>
+
+{% endblock content %}
+
+
 
 
 </html>

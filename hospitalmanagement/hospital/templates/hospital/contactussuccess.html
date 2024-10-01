@@ -1,41 +1,23 @@
-<!DOCTYPE html>
+{% extends 'hospital/homebase.html' %}
+
 {% load static %}
-<html lang="en" dir="ltr">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-  <title>LazyCoder || sumit</title>
-  <style media="screen">
-    .jumbotron {
-      margin-bottom: 0px;
-    }
-
-    .jumbotron h1 {
-      text-align: center;
-    }
-  </style>
-
-</head>
-
-<body>
-
-  {% include "hospital/navbar.html" %}
+{% block content %}
+<center>
   <br><br>
   <div class="jumbotron">
-    <h1 class="display-4">Your message sent successfully !</h1>
+    <h1 class="display-4">Your message was sent successfully !</h1>
+    <br>
     <p class="lead">We will respond to your feedback soon</p>
-    <hr class="my-4">
     <p>Check other features of website !</p>
     <p class="lead">
       <a class="btn btn-primary btn-lg" href="/" role="button">HOME</a>
     </p>
   </div>
+</center>
+<br><br><br><br><br>
 
-  {% include "hospital/footer.html" %}
-</body>
+  {% endblock content %}
 
 
-</html>
