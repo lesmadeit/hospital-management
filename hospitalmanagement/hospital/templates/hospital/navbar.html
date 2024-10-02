@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-  
-
-
-
-
-
 <body class="index-page">
   <header id="header" class="header sticky-top">
 
@@ -36,33 +30,26 @@
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="{% url 'home' %}" class="active">Home<br></a></li>
-            <li><a href="{% url 'admin' %}">Admin</a></li>
-            <li><a href="{% url 'doctor' %}">Doctor</a></li>
-            <li><a href="{% url 'patient' %}">Patient</a></li>
-            <li><a href="{% url 'about' %}">About Us</a></li>
-            <li><a href="{% url 'contact' %}">Contact</a></li>
+            <li><a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">Home</a></li>
+            <li><a href="{% url 'admin' %}" class="{% if request.resolver_match.url_name == 'admin' %}active{% endif %}">Admin</a></li>
+            <li><a href="{% url 'doctor' %}" class="{% if request.resolver_match.url_name == 'doctor' %}active{% endif %}">Doctor</a></li>
+            <li><a href="{% url 'patient' %}" class="{% if request.resolver_match.url_name == 'patient' %}active{% endif %}">Patient</a></li>
+            <li><a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">About Us</a></li>
+            <li><a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Contact</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
           
         </nav>
-
-        
-
-        
-
-      </div>
+      </div><!-- Scroll Top -->
+      <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+      
+      <!-- Preloader -->
+      <div id="preloader"></div>
+      
 
     </div>
-
   </header>
-
-
-
-
-
- 
-
+  
 </body>
 
 </html>
