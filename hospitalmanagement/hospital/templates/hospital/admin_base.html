@@ -12,7 +12,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-  <link rel="stylesheet" href="{% static '/style.css' %}">
+  <link rel="stylesheet" href="{% static 'hospital/css/style.css' %}">
 
 
   <style media="screen">
@@ -101,7 +101,7 @@
     }
 
     .menu {
-      background: #056e46;
+      background: #5bc995;
       height: 100vh;
       width: 240px;
       position: fixed;
@@ -142,16 +142,16 @@
       cursor: pointer;
     }
     .menu ul li.icon-dashboard {
-      background-image: url("http://www.entypo.com/images//gauge.svg");
+      background-image: url("/static/hospital/img/gauge2.svg");
     }
     .menu ul li.icon-customers {
-      background-image: url("http://www.entypo.com/images//briefcase.svg");
+      background-image: url("/static/hospital/img/briefcase.svg");
     }
     .menu ul li.icon-users {
-      background-image: url("http://www.entypo.com/images//users.svg");
+      background-image: url("/static/hospital/img/user.svg");
     }
     .menu ul li.icon-calendar {
-      background-image: url("http://www.entypo.com/images//calendar.svg");
+      background-image: url("/static/hospital/img/calendar.svg");
     }
 
     .menu ul li:hover {
@@ -280,10 +280,10 @@
   <nav class="menu" tabindex="0">
     <div class="smartphone-menu-trigger"></div>
     <header class="avatar">
-      <img src="{% static "images/adminpropic.png" %}" />
+      <img src="{% static 'hospital/images/adminpropic.png' %}" />
       <br><br>
-      <h6 style="color: white;">Admin</h6>
-      <h2 style="color: white;">{{request.user.first_name}}</h2>
+      <h6>Admin</h6>
+      <h2>{{request.user.first_name}}</h2>
     </header>
     <ul>
       <li tabindex="0" class="icon-dashboard"> <a style="color:white; text-decoration:none;" href="/admin-dashboard"><span>Dashboard</span></a> </li>
@@ -298,7 +298,7 @@
 
     <!-- nav start -->
     <div class="bs-example">
-      <nav class="navbar navbar-expand-md  navbar-dark fixed-top" style="background:#056e46;">
+      <nav class="navbar navbar-expand-md  navbar-dark fixed-top" style="background:#337AB7;">
         <a href="/admin-dashboard" class="navbar-brand">HOSPITAL MANAGEMENT</a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
           <span class="navbar-toggler-icon"></span>
@@ -306,7 +306,7 @@
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
           <div class="navbar-nav" style=" margin-left: 90%;">
 
-            <a style="color: white;" href="/logout" class="nav-item nav-link">Logout</a>
+            <a href="/logout" class="nav-item nav-link">Logout</a>
           </div>
         </div>
       </nav>
@@ -326,10 +326,10 @@
     <br><br><br><br>
     <footer>
       <p>
-        <a id="ftr" href="https://web.facebook.com/young.leslee" class="fa fa-facebook"></a>
-        <a id="ftr" href="" class="fa fa-whatsapp"></a>
-        <a id="ftr" href="https://instagram.com/lesmadeit" class="fa fa-instagram"></a>
-        <a id="ftr" href="https://twitter.com/lesmadeit" class="fa fa-twitter"></a>
+        <a id="ftr" href="https://facebook.com/sumit.luv/" class="fa fa-facebook"></a>
+        <a id="ftr" href="https://api.whatsapp.com/send?phone=919572181024&text=Hello%20Sumit.%0d%0aHow%20are%20you%20%3f%0d%0aI%20came%20from%20your%20website.&source=&data=#" class="fa fa-whatsapp"></a>
+        <a id="ftr" href="https://instagram.com/sumit.luv" class="fa fa-instagram"></a>
+        <a id="ftr" href="https://twitter.com/sumitkumar1503" class="fa fa-twitter"></a>
       </p>
 
       <br>
@@ -337,7 +337,8 @@
         <div class="row">
           <div class="col-md-12 col-sm-12">
             <div style="color:#ffffff;" class="wow fadeInUp footer-copyright">
-              
+              <p>Made in India <br>
+                Copyright &copy; 2020 LazyCoder </p>
             </div>
           </div>
         </div>
@@ -346,6 +347,7 @@
 
   </main>
   
+
 </body>
 
 </html>

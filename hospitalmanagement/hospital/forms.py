@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from . import models
+from .models import Doctor
 
 
 
@@ -23,6 +24,10 @@ class DoctorUserForm(forms.ModelForm):
         'password': forms.PasswordInput()
         }
 class DoctorForm(forms.ModelForm):
+    department = forms.ModelChoiceField(
+        queryset=Doctor.objects.all(),  # Or any relevant model
+        widget=forms.Select(attrs={'class': 'form-control'})  # Apply the 'form-control' class
+    )
     class Meta:
         model=models.Doctor
         fields=['address','mobile','department','status','profile_pic']

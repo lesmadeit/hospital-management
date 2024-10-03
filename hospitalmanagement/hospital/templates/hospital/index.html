@@ -10,25 +10,26 @@
 <!-- Hero Section -->
 <section id="hero" class="hero section light-background">
 
-  <img src="{% static 'hospital/img/hero-bg.jpg' %}" alt="" data-aos="fade-in">
+  <img src="{% static 'hospital/img/bg2.jpg' %}" alt="" data-aos="fade-in">
 
   <div class="container position-relative">
 
     <div class="welcome position-relative" data-aos="fade-down" data-aos-delay="100">
-      <h2>WELCOME TO MEDILAB</h2>
-      <p>We are team of talented designers making websites with Bootstrap</p>
+      <h2>WELCOME TO MEDICARE</h2>
+      <p>We are dedicated to provide round the clock healthcare to you.</p>
     </div><!-- End Welcome -->
 
     <div class="content row gy-4">
       <div class="col-lg-4 d-flex align-items-stretch">
         <div class="why-box" data-aos="zoom-out" data-aos-delay="200">
-          <h3>Why Choose Medilab?</h3>
+          <h3>Why Choose Medicare?</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-            Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
+            At Medicare, our mission is to provide high-quality, patient-centered healthcare to every individual who walks through our doors.
+             With a team of experienced medical professionals and state-of-the-art facilities, we offer a wide range of services designed to meet the
+              needs of our community.
           </p>
           <div class="text-center">
-            <a href="#about" class="more-btn"><span>Learn More</span> <i class="bi bi-chevron-right"></i></a>
+            <a href="{% url 'about' %}" class="more-btn"><span>Learn More</span> <i class="bi bi-chevron-right"></i></a>
           </div>
         </div>
       </div><!-- End Why Box -->
@@ -39,25 +40,25 @@
 
             <div class="col-xl-4 d-flex align-items-stretch">
               <div class="icon-box" data-aos="zoom-out" data-aos-delay="300">
-                <i class="bi bi-clipboard-data"></i>
-                <h4>Corporis voluptates officia eiusmod</h4>
-                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                <i class="bi bi-thermometer-half"></i>
+                <h4>Comprehensive Primary Care</h4>
+                <p>Our primary care services are the foundation of our healthcare offerings. Providing patients with personalized and preventive care.</p>
               </div>
             </div><!-- End Icon Box -->
 
             <div class="col-xl-4 d-flex align-items-stretch">
               <div class="icon-box" data-aos="zoom-out" data-aos-delay="400">
-                <i class="bi bi-gem"></i>
-                <h4>Ullamco laboris ladore pan</h4>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                <i class="bi bi-capsule"></i>
+                <h4>Advanced Surgical Services</h4>
+                <p>we offer a wide range of surgical procedures, performed by skilled surgeons who utilize the latest minimally invasive techniques.</p>
               </div>
             </div><!-- End Icon Box -->
 
             <div class="col-xl-4 d-flex align-items-stretch">
               <div class="icon-box" data-aos="zoom-out" data-aos-delay="500">
-                <i class="bi bi-inboxes"></i>
-                <h4>Labore consequatur incidid dolore</h4>
-                <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                <i class="bi bi-heart-pulse"></i>
+                <h4>Emergency and Trauma Care</h4>
+                <p>Our emergency department is open 24/7, providing life-saving care when you need it most. Equipped with advanced technology and staff.</p>
               </div>
             </div><!-- End Icon Box -->
 
@@ -86,28 +87,32 @@
       <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
         <h3>About Us</h3>
         <p>
-          Dolor iure expedita id fuga asperiores qui sunt consequatur minima. Quidem voluptas deleniti. Sit quia molestiae quia quas qui magnam itaque veritatis dolores. Corrupti totam ut eius incidunt reiciendis veritatis asperiores placeat.
+          Founded with the goal of delivering exceptional medical services, Medicare has
+           been a trusted healthcare provider for over 5 years. Our expert physicians, nurses, 
+           and staff are dedicated to maintaining the highest standards of care, utilizing advanced technologies and modern medical practices. 
+           We are proud to serve our community, 
+           focusing on both preventive care and specialized treatments to enhance the well-being of all our patients.
         </p>
         <ul>
           <li>
-            <i class="fa-solid fa-vial-circle-check"></i>
+            <i class="fa-solid fa-hospital"></i>
             <div>
-              <h5>Ullamco laboris nisi ut aliquip consequat</h5>
-              <p>Magni facilis facilis repellendus cum excepturi quaerat praesentium libre trade</p>
+              <h5>Dedicated to Compassionate Care</h5>
+              <p>Our mission is to provide high-quality, patient-centered healthcare to every individual who walks through our doors.</p>
             </div>
           </li>
           <li>
-            <i class="fa-solid fa-pump-medical"></i>
+            <i class="fa-solid fa-user-doctor"></i>
             <div>
-              <h5>Magnam soluta odio exercitationem reprehenderi</h5>
-              <p>Quo totam dolorum at pariatur aut distinctio dolorum laudantium illo direna pasata redi</p>
+              <h5>A Legacy of Excellence in Healthcare</h5>
+              <p>Our expert physicians, nurses, and staff are dedicated to maintaining the highest standards of care, utilizing advanced technologies</p>
             </div>
           </li>
           <li>
-            <i class="fa-solid fa-heart-circle-xmark"></i>
+            <i class="fa-solid fa-ambulance"></i>
             <div>
-              <h5>Voluptatem et qui exercitationem</h5>
-              <p>Et velit et eos maiores est tempora et quos dolorem autem tempora incidunt maxime veniam</p>
+              <h5>Your Health, Our Priority</h5>
+              <p>From routine check-ups to complex medical procedures, our team is here to support you every step of the way.</p>
             </div>
           </li>
         </ul>
@@ -118,6 +123,109 @@
   </div>
 
 </section><!-- /About Section -->
+
+<!-- Services Section -->
+<section id="services" class="services section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Services</h2>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item  position-relative">
+          <div class="icon">
+            <i class="fas fa-heartbeat"></i>
+          </div>
+          <a class="stretched-link">
+            <h3>Comprehensive Primary Care</h3>
+          </a>
+          <p>Our primary care services are the foundation of our healthcare offerings, providing patients 
+            with personalized and preventive care. From routine check-ups and vaccinations to health screenings
+             and chronic disease management, our experienced primary care physicians focus on maintaining your 
+             overall well-being. We work with you to create a tailored healthcare plan that addresses your unique needs, helping you lead a healthier life.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="fas fa-pills"></i>
+          </div>
+          <a class="stretched-link">
+            <h3>Advanced Surgical Services</h3>
+          </a>
+          <p>we offer a wide range of surgical procedures, performed by skilled surgeons who utilize the latest minimally invasive techniques. Whether you 
+            require general surgery, orthopedic surgery, or specialized treatments, our surgical team is dedicated to ensuring the best outcomes with minimal 
+            recovery time. Our fully equipped operating rooms and post-operative care ensure you receive top-tier surgical treatment from start to finish.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="fas fa-hospital-user"></i>
+          </div>
+          <a class="stretched-link">
+            <h3>Emergency and Trauma Care</h3>
+          </a>
+          <p>Our emergency department is open 24/7, providing life-saving care when you need it most. Equipped with advanced technology and staffed by highly 
+            trained emergency physicians, nurses, and specialists, we are prepared to handle everything from minor injuries to critical trauma cases. At Medicare, 
+            we understand that emergencies can't wait, and we are committed to delivering fast, effective care to stabilize and treat patients in urgent situations.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="fas fa-dna"></i>
+          </div>
+          <a class="stretched-link">
+            <h3>Women’s Health Services</h3>
+          </a>
+          <p>We are proud to offer comprehensive women’s health services, designed to meet the unique medical needs of women at every stage of life. Our obstetrics and
+             gynecology team provides expert care for pregnancy, childbirth, and postpartum support, while also offering routine gynecological exams, family planning, 
+             and menopause management. Our goal is to provide compassionate, personalized care that empowers women to make informed decisions about their health.</p>
+          <a class="stretched-link"></a>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="fas fa-wheelchair"></i>
+          </div>
+          <a class="stretched-link">
+            <h3>Pediatrics and Childcare</h3>
+          </a>
+          <p>Our dedicated pediatric team offers specialized healthcare services for infants, children, and adolescents. From routine wellness visits
+             and immunizations to diagnosing and treating childhood illnesses, we are committed to supporting your child’s growth and development. 
+             Our child-friendly facilities and compassionate staff ensure that your little ones receive the care they need in a comforting, welcoming environment.</p>
+          <a class="stretched-link"></a>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="fas fa-notes-medical"></i>
+          </div>
+          <a class="stretched-link">
+            <h3>Rehabilitation and Physical Therapy</h3>
+          </a>
+          <p>Our rehabilitation and physical therapy services are designed to help patients regain strength, mobility, and independence following injury, surgery, or illness. Our team of licensed therapists works closely with you to create personalized treatment plans that address your specific recovery goals. Whether you're recovering from a sports injury, stroke, or orthopedic surgery, our goal is to guide you on your path to recovery and improved quality of life.</p>
+          <a class="stretched-link"></a>
+        </div>
+      </div><!-- End Service Item -->
+    </div>
+
+  </div>
+
+</section><!-- /Services Section -->
 
 
 {% endblock content %}
