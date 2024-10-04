@@ -29,10 +29,26 @@
         <nav id="navmenu" class="navmenu">
           <ul>
             <li><a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">Home</a></li>
-            <li><a href="{% url 'admin' %}" class="{% if request.resolver_match.url_name == 'admin' %}active{% endif %}">Admin</a></li>
-            <li><a href="{% url 'doctor' %}" class="{% if request.resolver_match.url_name == 'doctor' %}active{% endif %}">Doctor</a></li>
-            <li><a href="{% url 'patient' %}" class="{% if request.resolver_match.url_name == 'patient' %}active{% endif %}">Patient</a></li>
+            <li class="dropdown" ><a href="{% url 'admin' %}"><span>Admin</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="{% url 'adminsignup' %}">Sign Up</a></li>
+                <li><a href="{% url 'adminlogin' %}">Log In</a></li>
+              </ul>
+            </li>
+            <li class="dropdown" ><a href="{% url 'doctor' %}"><span>Doctor</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="{% url 'doctorsignup' %}">Sign Up</a></li>
+                <li><a href="{% url 'doctorlogin' %}">Log In</a></li>
+              </ul>
+            </li>
+            <li class="dropdown" ><a href="{% url 'doctor' %}"><span>Patient</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="{% url 'patientsignup' %}">Sign Up</a></li>
+                <li><a href="{% url 'patientlogin' %}">Log In</a></li>
+              </ul>
+            </li>
             <li><a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">About Us</a></li>
+            
             <li><a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Contact</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
