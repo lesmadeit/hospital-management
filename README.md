@@ -1,0 +1,1 @@
+A simple Hospital Management app using Django and Bootstrap
