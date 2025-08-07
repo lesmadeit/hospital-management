@@ -10,7 +10,7 @@ services:
     name: medicarehospital
     runtime: python
     buildCommand: './build.sh'
-    startCommand: 'cd hospitalmanagement && python -m gunicorn hospitalmanagement.wsgi:application --bind 0.0.0.0:$PORT' 
+    startCommand: 'cd hospital/hospitalmanagement && python -m gunicorn hospitalmanagement.hospitalmanagement.wsgi:application --bind 0.0.0.0:$PORT' 
     #envVars:
     #- key: DATABASE_URL
     #fromDatabase:
