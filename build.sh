@@ -2,6 +2,7 @@
 #Exit on error
 set -o errexit
 
+pip install --upgrade pip setuptools wheel
 pip install -r requirements.txt
 
 cd hospitalmanagement
