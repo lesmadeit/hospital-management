@@ -5,21 +5,22 @@
 
 
 {% block content %}
-  <br>
-  <br>
+<br>
+<br>
 <center>
   <div class="jumbotron" style="margin-top: 0px;
     margin-bottom: 0px;">
     <h1 class="display-4">Hello {{request.user.first_name}}</h1>
-    <p class="lead">Your Account is not approved till now <br><br>Our Team is checking your profile <br><br> Soon your Account will be confirmed !!!</p>
-    
+    <p class="lead">Your Account is not approved till now <br><br>Our Team is checking your profile <br><br> Soon your
+      Account will be confirmed !!!</p>
+
     <p>Check Later</p>
     <p class="lead">
-      <a class="btn btn-primary btn-lg" href="/logout" role="button">Logout For Now</a>
+    <form action="/logout" method="post" style="display: inline;">
+      {% csrf_token %}
+      <button type="submit" class="nav-item nav-link btn btn-link">Logout for now</button>
+    </form>
     </p>
   </div>
 </center>
- {% endblock content %}
-
-
-
+{% endblock content %}
